@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Success</title>
+        
+        <style>
+            @media screen and (min-width: 580px) and (max-width: 1800px){
+                .success{
+                    display: none;
+                }
+                .work{
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    margin: auto;
+                    color: red;
+                }
+            }
+            @media screen and  (min-width:200px)and (max-width: 576px){
+            .work{
+                display: none;
+            }
+            .card{
+            width: 90%;
+            height: 90vh;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5vh 3vh;
+            text-align: center;
+            }
+            #successCard{
+                text-align: center;
+            }
+            img{
+                width: 95%;
+                margin: -3vh;
+                border-radius: 25px;
+                margin-top: 1vh;
+            }
+              h3{
+                color: rgb(95, 95, 95);
+              }
+              #english{
+                color: rgb(54, 161, 249);
+                font-weight: 700;
+                font-size: 3vh;
+                margin: 1vh;
+    
+            }
+            .eid img{
+                width: 50%;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="work">
+            <h1>This Work in your Phone Check it Once</h1>
+        </div>
+        <div class="success">
+        <div class="card" id="successCard">
+            <div class="card-body">
+            <img src="./eid gif.gif" class="img-fluid" id="succe" alt="...">
+              <h1 class="card-title">Payment successful!</h1>
+              <h3> Send ₹100 in phonePe from 7396183700@ybl </h3>
+            <h4 class="card-title" id="english">Once Again Eid Mubarak</h4>
+            <div class="eid">
+
+                <img src="./Eid Ramzan.png" class="eid" alt="">
+            </div>
+              
+            </div>
+          </div>
+        </div>
+    </body>
+    </html>
+    
+    <script>
+        
+        const phoneNumberDisplay = document.querySelector('#phoneNumberDisplay');
+        const nameDisplay = document.querySelector('#nameDisplay');
+        
+        // Set the phone number and name values
+        phoneNumberDisplay.textContent = phoneNumber;
+        nameDisplay.textContent = name;
+    </script>
+</body>
+</html>

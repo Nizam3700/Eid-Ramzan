@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak 2024</title>
+    <link rel="shortcut icon" href="https://www.jansatta.com/wp-content/uploads/2024/04/Eid-chand-mubarak.jpg" type="image/x-icon">
+
+    <style>
+        @media Screen and (min-width: 580px) and (max-width: 1800px){
+            #web{
+                display: none;
+            }
+            .work{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                margin: auto;
+                color: red;
+            }
+
+
+        }
+
+    @media screen and (min-width: 200px) and (max-width: 576px ){
+        .work{
+            display: none;
+        }
+        #myCard {
+            width: 90%;
+            height: 90vh;
+            position: relative;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5vh 3vh;
+            text-align: center;
+          }
+          
+          #myCard.flip {
+            transform: rotateY(180deg);
+          }
+          img{
+            width: 95%;
+            margin: -3vh;
+            border-radius: 25px;
+            margin-top: 1vh;
+          }
+
+        #arabic{
+            color: rgb(98, 0, 255);
+            font-weight: 600;
+            font-size: 4vh;
+            margin: 1vh;
+        }
+        #english{
+            color: rgb(0, 255, 8);
+            font-weight: 700;
+            font-size: 3vh;
+            margin: 1vh;
+
+        }
+        #collect{
+            color: rgb(255, 64, 0);
+            font-weight: 700;
+            font-size: 2.5vh;
+            margin: 1vh;
+        }
+
+        button a{
+            text-decoration: none;
+            color: #fff;
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        a:hover{
+            color: black;
+        }
+        button {
+            background-color: rgb(101, 101, 251);
+            border: 2px solid black;
+            border-radius: 8px;
+            height: 5vh;
+            margin: 2vh;
+            
+        }
+        button:hover{
+            background-color: rgb(20, 201, 41);
+        }
+        #myCard h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+
+          
+          .front,.back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+          }
+          
+          .front {
+            background-color: #fff;
+          }
+          
+          .back {
+            background-color: #fff;
+            transform: rotateY(180deg);
+          }
+          form{
+            width: 95%;
+            margin: auto;
+            margin-top: 5vh;
+            border: 1px solid grey;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 8px;
+          }
+          form div{
+            margin: 2vh;
+          }
+          form input{
+            height: 3vh;
+            font-size: large;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          }
+          form label{
+            color: rgb(255, 25, 0);
+            font-size: larger;
+            font-weight: 700;
+          }
+          
+          
+          #successCard {
+            display: none;
+          }
+
+    }
+    </style>
+</head>
+<body>
+    <div class="work">
+        <h1>This Work in your Phone Check it Once</h1>
+    </div>
+    <div class="web" id="web">
+    <div class="card" id="myCard">
+        <div class="front">
+            <h1>Eid Al Fitr 2024</h1>
+          <img src="./hug.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" id="arabic" >تَقَبَّلَ اللهُ مِنَّا وَمِنكُم</h5>
+            <h4 class="card-title" id="english">taqabbalallahu minna wa minkum</h4>
+            <p class = "card-text" id="collect">Collect Your Eidiyah Amount</p>
+            <button>
+                <a href="#" class="btn btn-primary" id="flipButton">Collect Now</a>
+
+            </button>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-body">
+            <h2 class="card-title">Get Your Eidiyah in PhonePe</h2>
+            <img src="https://www.coindesk.com/resizer/UCFi0rd48-NL2pOiIwdZgsI3xRs=/1056x792/filters:quality(80):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/coindesk/Q4PW6DGSLNFUVEFQMMTAU7AAAM.jpg" alt="">
+            <form id="paymentForm">
+              <div class="mb-3">
+                <label for="phoneNumber">PhonePe Number</label>
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter 10-digit phone number">
+              </div>
+              <div class="mb-3">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name">
+              </div>
+              <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="successCard">
+        <div class="card-body">
+            <img src="./eid gif.gif" class="img-fluid" alt="...">
+          <h5 class="card-title">Payment successful!</h5>
+          <p>Phone number: <span id="phoneNumberDisplay"></span></p>
+          <p>Name: <span id="nameDisplay"></span></p>
+          <h1>hi</h1>
+        </div>
+      </div>
+    </div>
+      
+
+      <script>
+        const flipButton = document.querySelector('#flipButton');
+const card = document.querySelector('#myCard');
+const paymentForm = document.querySelector('#paymentForm');
+const phoneNumberDisplay = document.querySelector('#phoneNumberDisplay');
+const nameDisplay = document.querySelector('#nameDisplay');
+const successCard = document.querySelector('#successCard');
+const submitButton = document.querySelector('#submitButton');
+
+flipButton.addEventListener('click', () => {
+  card.classList.toggle('flip');
+  paymentForm.style.display = 'block';
+});
+
+submitButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const phoneNumber = document.querySelector('#phoneNumber').value;
+  const name = document.querySelector('#name').value;
+  if (phoneNumber.length!== 10) {
+    alert('Please enter a 10-digit phone number.');
+    return;
+  }
+  phoneNumberDisplay.textContent = phoneNumber;
+  nameDisplay.textContent = name;
+  card.classList.remove('flip');
+  successCard.style.display = 'block';
+  window.open('success.html', '_blank');
+});
+      </script>
+</body>
+</html>
